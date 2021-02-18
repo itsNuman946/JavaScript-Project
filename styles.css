@@ -1,0 +1,58 @@
+
+
+.text{
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+h1{
+  font-size: 70px;
+}
+
+#inp{
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border:3px solid black;
+}
+
+#btn{
+    background: blueviolet;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    outline: none;
+
+}
+.show{
+    margin-left: 200px;
+}
+#btn:hover{
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+li{
+    display: inline-block;
+    line-height: 40px;
+    
+}
+
+a{
+    color:rgb(0, 0, 0);
+    
+    font-size:25px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+    
+    margin: 20px;
+}
+
+a:hover{
+    background: rgb(76, 156, 202);
+    transition: .5s;
+}
+
