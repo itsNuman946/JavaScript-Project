@@ -10,9 +10,22 @@ function getData(){
   an.appendChild(textnode);
   document.getElementById("myList").appendChild(node);
   document.getElementById("list").appendChild(an);
-  
 }
-function showNav(constraints){
+function addButton(cssStyle,ValueBtn){
+  var btnm = document.createElement("button");
+  btnm.innerHTML=ValueBtn;
+  btnm.id="btn11";
+  btnm.style.cssText=cssStyle;
+  return btnm;
+}
+function searchbar(cssStyle){
+  var mi = document.createElement("INPUT");
+    mi.id="serch";
+    mi.style.cssText=cssStyle;
+    mi.setAttribute("placeholder", "   Search....");
+    return mi;
+}
+function showNav(){
   for (i=0;i<=5;i++){ 
     var div = document.createElement("div");
     div.id="firstnav"+[i];
@@ -30,8 +43,6 @@ function showNav(constraints){
     cln.style.listStyle="none";
     cln.style.marginRight="70px";
     document.getElementById("firstnav"+[i]).appendChild(cln);
-    
-
     switch(i){
       case 0:
       { 
@@ -49,40 +60,24 @@ function showNav(constraints){
       break;
       case 1:
       {
-        cln.style.float="left";
+        j=searchbar("float: right; width: 300px; outline:none; height:30px; border:3px solid black ;border-radius:20px 20px 20px 20px; margin-top:20px;");
+        document.getElementById("firstnav1").appendChild(j);
+        cln.style.float="right";
         div.style.backgroundImage="url('nav3pic.jpg')";
+        a=addButton("height: 30px; width: 100px; background-color: blue; margin-top:30px" ,"hello world" );
+        document.getElementById("firstnav1").appendChild(a);
       }
       break;
       case 2:
       {
-        
         cln.style.float="left";
         div.style.background="#ffff66";
         div.style.border="2px solid #e6b800";
-        var bt2=document.createElement("button");
-        bt2.id="register";
-        bt2.innerHTML = "Start For Free"; 
-        bt2.style.background="#ff4d4d";
-        bt2.style.color="white";
-        bt2.style.float="right";
-        bt2.style.border="none";
-        bt2.style.height="35px";
-        bt2.style.width="100px";
-        bt2.style.marginTop="0px";
-        bt2.style.marginRight="20px";
-        bt2.style.borderRadius="20px";
-        document.getElementById("firstnav2").appendChild(bt2);
-        var bt=document.createElement("button");
-        bt.id="singin";
-        bt.innerHTML = "Sign In"; 
-        bt.style.background="";
-        bt.style.color="black";
-        bt.style.border="none";
-        bt.style.height="35px";
-        bt.style.width="70px";
-        bt.style.marginTop="0px";
-        bt.style.float="right";
-        document.getElementById("firstnav2").appendChild(bt);
+        btn1=addButton("height: 35px; width: 100px; color:white; border:none; float:right; margin-right:20px; border-radius:20px; background-color:#ff4d4d;", "Sign Up");
+        document.getElementById("firstnav2").appendChild(btn1);
+        btn2=addButton("height: 35px; width: 70px; color:black; border:none; float:right;","Sign In");
+        document.getElementById("firstnav2").appendChild(btn2);
+
       }
       break;
       case 3:
@@ -90,6 +85,7 @@ function showNav(constraints){
         cln.style.float="left";
         div.style.background="white";
         div.style.border="1px solid black";
+        
       }
       break;
       case 4:
@@ -104,29 +100,10 @@ function showNav(constraints){
        div.style.background="white";
        div.style.borderBottom="1px solid black";
        div.style.borderTop="1px solid black";
-       var bt2=document.createElement("button");
-        bt2.id="register";
-        bt2.innerHTML = "Register"; 
-        bt2.style.background="red";
-        bt2.style.color="white";
-        bt2.style.float="right";
-        bt2.style.border="none";
-        bt2.style.height="35px";
-        bt2.style.width="70px";
-        bt2.style.marginTop="20px";
-        bt2.style.marginRight="20px";
-        document.getElementById("firstnav5").appendChild(bt2);
-        var bt=document.createElement("button");
-        bt.id="singin";
-        bt.innerHTML = "Sign In"; 
-        bt.style.background="blue";
-        bt.style.color="white";
-        bt.style.border="none";
-        bt.style.height="35px";
-        bt.style.width="70px";
-        bt.style.marginTop="20px";
-        bt.style.float="right";
-        document.getElementById("firstnav5").appendChild(bt);
+        btn1=addButton("height: 35px; width: 70px; color:white; border:none; float:right; margin-right:20px; background-color:red; margin-top:20px", "Register");
+        document.getElementById("firstnav5").appendChild(btn1);
+        btn2=addButton("height: 35px; width: 70px; color:white; border:none; float:right; background-color:blue;margin-top:20px", "Login In");
+        document.getElementById("firstnav5").appendChild(btn2);
       }
       break;
       default:
