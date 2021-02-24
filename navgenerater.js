@@ -11,6 +11,7 @@ function getData(){
   document.getElementById("myList").appendChild(node);
   document.getElementById("list").appendChild(an);
 }
+
 function addButton(cssStyle,ValueBtn){
   var btnm = document.createElement("button");
   btnm.innerHTML=ValueBtn;
@@ -18,6 +19,7 @@ function addButton(cssStyle,ValueBtn){
   btnm.style.cssText=cssStyle;
   return btnm;
 }
+
 function searchbar(cssStyle){
   var mi = document.createElement("INPUT");
     mi.id="serch";
@@ -25,6 +27,7 @@ function searchbar(cssStyle){
     mi.setAttribute("placeholder", "   Search....");
     return mi;
 }
+
 function showNav(){
   for (i=0;i<=5;i++){ 
     var div = document.createElement("div");
